@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="MD Mizanur Rahman">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>javaScriptCondition</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+				font-family:georgia;
+			}
+			.container{
+				width:80%;
+				height:560px;
+				background:#ddd;
+				margin:0 auto;
+				padding:50px;
+			}
+			h1{
+			font-size:40px;
+			color:#149EE1;
+			background:white;
+			margin-bottom:10px;
+			padding:30px;
+			}
+			input{
+				padding:20px;
+				width:250px;
+				height:65px;
+				border-radius:5px;
+				font-size:30px;
+			}
+			#submitButton{
+				padding:10px;
+				width:150px;
+				height:65px;
+				border:none;
+				border-radius:10px;
+				font-size:30px;
+				cursor:pointer;
+			}
+			#submitButton:hover{
+				background:#26B7EA;
+				color:white;
+			}
+			span{
+			color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<h1>You Can Check Your GPA in Letter Grade: </h1>
+			<input type="number" value="" id="inputResult" Placeholder="Enter Number" /><br><br>
+			<input type="submit" id="submitButton" onclick="submitButton()" value="Submit"/>
+		</div>
+		<script type="text/javascript">
+		function submitButton(){
+			var x=document.getElementById('inputResult').value;
+			if(x == ''){
+			window.alert("Please enter your number !!!");
+			}else{
+				if(x<0 || x>100){
+					document.write("<h2>Your Input is invalid</h2>");
+					}else{
+						if(x>=80){
+						document.write("<h2>You got : A+</h2>");
+						}else{
+							if(x>=70){
+							document.write("<h2>You got : A</h2>");
+							}else{
+								if(x>=60){
+								document.write("<h2>You got : A-</h2>");
+								}else{
+									if(x>=50){
+									document.write("<h2>You got : B</h2>");
+									}else{
+										if(x>=40){
+										document.write("<h2>You got : C</h2>");
+										}else{
+											if(x>=33){
+											document.write("<h2>You got : D</h2>");
+											}else{
+												if(x<=32){
+												document.write("<h2>Sorry <span>&#x1F622; </span> you got : F</h2>");
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		</script>
+	</body>
+</html>
